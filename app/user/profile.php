@@ -13,7 +13,7 @@ if(!isSignedIn()) {
 
 try {
 	$user = getUser(getSignedInUser());
-	if(isset($user['creditcard_id']) && $user['creditcard_id'] != NULL) {
+	if(isset($user['creditcard_id'])) {
 		$card = getCreditCard($user['creditcard_id']);
 	}
 	// Sign in form postback
